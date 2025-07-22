@@ -15,7 +15,6 @@ const Index = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-foreground mb-2">Vanderbilt Dining</h1>
-          <p className="text-lg text-muted-foreground">Choose a dining hall to view today's menu</p>
         </div>
         <div className="space-y-4 max-w-md mx-auto">
           {diningHalls.map((name) => (
@@ -23,7 +22,6 @@ const Index = () => {
               key={name}
               id={name}
               name={name}
-              icon={"🏛️"} // Placeholder, since backend only returns names
             />
           ))}
         </div>

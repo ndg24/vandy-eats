@@ -3,11 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 interface DiningHallCardProps {
   name: string;
-  icon: string;
   id: string;
 }
 
-export function DiningHallCard({ name, icon, id }: DiningHallCardProps) {
+export function DiningHallCard({ name, id }: DiningHallCardProps) {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -20,7 +19,6 @@ export function DiningHallCard({ name, icon, id }: DiningHallCardProps) {
       onClick={handleClick}
     >
       <div className="flex flex-col items-center gap-4 w-full">
-        <div className="text-4xl">{icon}</div>
         <div>
           <h3 className="text-xl font-semibold text-foreground">{name}</h3>
         </div>
