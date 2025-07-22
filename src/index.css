@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Soft UI Brown/Cream Theme - Palette: #FFFBE9, #E3CAA5, #CEAB93, #AD8B73 */
+
+@layer base {
+  :root {
+    /* Soft UI Background System */
+    --background: 44 100% 97%; /* #FFFBE9 */
+    --foreground: 25 30% 25%;   /* deep brown for contrast */
+
+    /* Card System with Soft Shadows */
+    --card: 36 59% 80%; /* #E3CAA5 */
+    --card-foreground: 25 30% 30%;
+
+    --popover: 36 59% 80%;
+    --popover-foreground: 25 30% 30%;
+
+    /* Primary: #AD8B73 (deepest brown) */
+    --primary: 27 28% 57%; /* #AD8B73 */
+    --primary-foreground: 0 0% 100%; /* white text on brown */
+
+    /* Secondary: #CEAB93 (mid brown) */
+    --secondary: 27 37% 70%; /* #CEAB93 */
+    --secondary-foreground: 25 30% 25%;
+
+    /* Muted Tones for Soft UI */
+    --muted: 44 100% 98%; /* very light cream, close to #FFFBE9 */
+    --muted-foreground: 25 30% 40%;
+
+    /* Accent Colors: #CEAB93 */
+    --accent: 27 37% 70%; /* #CEAB93 */
+    --accent-foreground: 25 30% 30%;
+
+    /* Destructive (red, unchanged) */
+    --destructive: 350 75% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Soft Borders and Inputs */
+    --border: 36 59% 85%;
+    --input: 36 59% 90%;
+    --ring: 27 28% 57%;
+
+    --radius: 1rem;
+
+    /* Soft UI Gradients and Effects */
+    --gradient-soft: linear-gradient(135deg, hsl(var(--card)), hsl(44 100% 98%));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(27 37% 70%));
+    --shadow-soft: 8px 8px 16px hsl(36 59% 85%), -8px -8px 16px hsl(0 0% 100%);
+    --shadow-inset: inset 4px 4px 8px hsl(36 59% 85%), inset -4px -4px 8px hsl(0 0% 100%);
+    --shadow-card: 4px 4px 12px hsl(36 59% 85%), -2px -2px 8px hsl(0 0% 100%);
+    
+    /* Accent colors for meals (use brown/cream variations) */
+    --dining-hall-primary: 27 28% 57%; /* #AD8B73 */
+    --breakfast-accent: 27 37% 70%; /* #CEAB93 */
+    --lunch-accent: 36 59% 80%; /* #E3CAA5 */
+    --dinner-accent: 44 100% 97%; /* #FFFBE9 */
+
+    /* Sidebar colors */
+    --sidebar-background: 36 59% 80%; /* #E3CAA5 */
+    --sidebar-foreground: 27 28% 57%; /* #AD8B73 */
+    --sidebar-primary: 27 28% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 27 37% 70%;
+    --sidebar-accent-foreground: 25 30% 25%;
+    --sidebar-border: 36 59% 85%;
+    --sidebar-ring: 27 28% 57%;
+  }
+
+  .dark {
+    --background: 27 28% 20%; /* deep brown for dark mode */
+    --foreground: 36 59% 80%; /* light brown */
+
+    --card: 27 28% 24%;
+    --card-foreground: 36 59% 80%;
+
+    --popover: 27 28% 24%;
+    --popover-foreground: 36 59% 80%;
+
+    --primary: 27 28% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 27 37% 40%; /* muted brown */
+    --secondary-foreground: 36 59% 80%;
+
+    --muted: 27 28% 30%;
+    --muted-foreground: 36 59% 80%;
+
+    --accent: 27 37% 40%;
+    --accent-foreground: 36 59% 80%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 36 59% 80%;
+
+    --border: 27 28% 28%;
+    --input: 27 28% 22%;
+    --ring: 27 28% 57%;
+    --sidebar-background: 27 28% 24%;
+    --sidebar-foreground: 36 59% 80%;
+    --sidebar-primary: 27 28% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 27 37% 40%;
+    --sidebar-accent-foreground: 36 59% 80%;
+    --sidebar-border: 27 28% 28%;
+    --sidebar-ring: 27 28% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
